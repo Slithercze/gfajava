@@ -4,29 +4,27 @@ The Dusicyon FullStack class is the 2022S02 (that is the 2st semester of GreenFo
 
 - HTML
 - CSS
-- Typescript
-- Javascript
+- Java
 
-The mentors are Aleš, Lukáš and Dávid
+The mentors are Aleš, Lukáš J., Lukáš K., Jakub and Dávid
 
 ## Important Links
 
-* [Wiki](https://github.com/green-fox-academy/dusicyon-sic-fullstack-syllabus/wiki)- collection of your daily learning materials
-* [Discord](https://discord.gg/YBbmq2Um) - for daily communication
+* [Wiki](https://github.com/green-fox-academy/otocyon-mantis-syllabus/wiki)- collection of your daily learning materials
+* [Discord](https://discord.gg/MfRJyw7c) - for daily communication
 * [Github - GreenFox](https://github.com/green-fox-academy) - overall tracking of our course
-* [Class Calendar](https://calendar.google.com/calendar/u/1?cid=Y19ndHB1dmlzbWRrbHB0ZmYwbGxyZXVxbG1oMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t)
+* [Class Calendar](https://calendar.google.com/calendar/u/1?cid=Y18wMDYzM2U5ZWM5ZTFmZjIyZWVkOTRlY2VkMDQyO[…]NTJlNjk1ZWJiNTIwNTg3OGMwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)
 * Styleguide
   * [HTML + CSS](https://github.com/green-fox-academy/teaching-materials/blob/master/styleguide/html-css.md)
-  * [Typescript](https://github.com/green-fox-academy/teaching-materials/blob/9298f98cb61bfdb6ffcb29257440d6c4d28c12a4/styleguide/typescript.md)
-  * [Javascript](https://github.com/green-fox-academy/teaching-materials/blob/9298f98cb61bfdb6ffcb29257440d6c4d28c12a4/styleguide/javascript.md)
+  * [JAVA](https://github.com/green-fox-academy/teaching-materials/blob/master/styleguide/java.md)
 * [Definitions](https://github.com/green-fox-academy/definitions)
-* [Who can help you](Who_and_when_to_contact_if.pdf)
-* [Student Attendance Tracker]() [TBD]
+* [Who can help you](https://drive.google.com/file/d/1u7Lqe11GkgmQvddwSYRdldnspwRaWHZP/view?usp=sharing)
+* [Student Attendance Tracker]()
 
 ## Module Training Phase
 
 The course consists of 3 distinct phases:
 
-* Basics - introducing the foundations of software development and studying HTML and CSS
+* Foundation - introducing the foundations of software development and studying HTML and CSS
 * Orientation - learning the core concepts in programming (that can translate to other languages), and then expanding deeper into the facilities and opportunities afforded in the Javascript environment.
 * Project - We form working groups that are working independently with mentor supervision on a lifelike project.
