@@ -16,7 +16,7 @@ The mentors are Aleš, Lukáš J., Lukáš K., Jakub and Dávid
 * [Class Calendar](https://calendar.google.com/calendar/u/1?cid=Y18wMDYzM2U5ZWM5ZTFmZjIyZWVkOTRlY2VkMDQyO[…]NTJlNjk1ZWJiNTIwNTg3OGMwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)
 * Styleguide
   * [HTML + CSS](https://github.com/green-fox-academy/teaching-materials/blob/master/styleguide/html-css.md)
-  * [JAVA](https://github.com/green-fox-academy/teaching-materials/blob/master/styleguide/java.md)
+  * [Java](https://github.com/green-fox-academy/teaching-materials/blob/master/styleguide/java.md)
 * [Definitions](https://github.com/green-fox-academy/definitions)
 * [Who can help you](https://drive.google.com/file/d/1u7Lqe11GkgmQvddwSYRdldnspwRaWHZP/view?usp=sharing)
 * [Student Attendance Tracker]()
