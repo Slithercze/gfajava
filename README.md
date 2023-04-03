@@ -14,7 +14,7 @@ The mentors are Aleš, Lukáš J., Lukáš K., Jakub and Dávid
 * [Lightning talks](https://docs.google.com/spreadsheets/d/1Yvm5eSdfxGAnYwK9AQYubEXEa-49MqJVmkOAH7bqjAI/edit?usp=sharing)
 * [Discord](https://discord.gg/MfRJyw7c) - for daily communication
 * [Github - GreenFox](https://github.com/green-fox-academy) - overall tracking of our course
-* [Class Calendar](https://calendar.google.com/calendar/u/1?cid=Y18wMDYzM2U5ZWM5ZTFmZjIyZWVkOTRlY2VkMDQyO[…]NTJlNjk1ZWJiNTIwNTg3OGMwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)
+* [Class Calendar](https://calendar.google.com/calendar/u/0?cid=Y18wMDYzM2U5ZWM5ZTFmZjIyZWVkOTRlY2VkMDQyOTczMGI2ZmJhNDE5NGM4N2RjNTJlNjk1ZWJiNTIwNTg3OGMwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)
 * Styleguide
   * [HTML + CSS](https://github.com/green-fox-academy/teaching-materials/blob/master/styleguide/html-css.md)
   * [Java](https://github.com/green-fox-academy/teaching-materials/blob/master/styleguide/java.md)
