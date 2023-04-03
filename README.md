@@ -6,7 +6,7 @@ The Dusicyon FullStack class is the 2022S02 (that is the 2st semester of GreenFo
 - CSS
 - Java
 
-The mentors are Aleš, Lukáš J., Lukáš K., Jakub and Dávid
+The mentors are Aleš, Lukáš J., Lukáš K., Jakub, Dávid and Matěj
 
 ## Important Links
 
