@@ -1,12 +1,12 @@
-# Dusicyon FullStack syllabus
+# Otocyon FullStack syllabus
 
-The Dusicyon FullStack class is the 2022S02 (that is the 2st semester of GreenFoxAcademy (GFA) 2022 academic year) starting on September 12th 2022 and ending, on the 24th of February 2023. The technical stack for this class covers:
+The Otocyon FullStack class is the 2023S01 (that is the 1st semester of GreenFoxAcademy (GFA) 2023 academic year) starting on April 3rd 2023 and ending, on the 1st of September 2023. The technical stack for this class covers:
 
 - HTML
 - CSS
 - Java
 
-The mentors are Aleš, Lukáš J., Lukáš K., Jakub, Dávid and Matěj
+The mentors are Aleš, Lukáš J., Lukáš K., Matěj, Jakub and Dávid
 
 ## Important Links
 
