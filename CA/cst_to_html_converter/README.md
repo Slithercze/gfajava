@@ -22,15 +22,4 @@ Create a Java class named CsvToHtmlTable with a main() method that performs the 
 * Include `<tbody>` element to wrap the data rows
 * `<table>` element should have the class attribute set to "table"
 
-### Deliverables
-The CsvToHtmlTable Java class with the implemented main() method and any necessary helper methods
-At least three example CSV files used for testing
-The HTML template file /assets/template.html with the proper structure for inserting the generated table
-Evaluation Criteria
-The program successfully reads and processes all CSV files in the specified input directory
-The program generates an HTML table with the correct structure and inserts it into the provided HTML template
-The program saves the modified HTML template to the specified output directory
-The program handles errors gracefully, such as when the input directory does not exist or the template file is missing the <body> and </body> tags
-The code is well-organized, easy to read, and follows best practices for Java programming
-
 
