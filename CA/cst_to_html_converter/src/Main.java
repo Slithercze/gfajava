@@ -14,7 +14,7 @@ public class Main {
     createSaveDirectory(outputDirectory);
 
     // 2. načíst csv a vytvořit z něj html tabulku
-    String htmlTable = null;
+    String htmlTable = "";
     try {
       htmlTable = parseCsvToHTMLTable(inputDirectory + inputFile);
     } catch (IOException e) {
@@ -22,7 +22,7 @@ public class Main {
     }
 
     // 3. Načíst svoji šablonu
-    String templateContent = null;
+    String templateContent = "";
     try {
       templateContent = Files.readString(Path.of(templatePath));
     } catch (IOException e) {
