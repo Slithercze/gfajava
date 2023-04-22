@@ -17,7 +17,7 @@ public class FibAndDataStructures {
 
         int a = 12;
         int[] pole = {1, 3, a}; // shorthand
-        int[] pole2 = new int[] {1, 3}; // long version
+        int[] pole2 = new int[] {1, 3, a}; // long version
         int[] pole3 = new int[2]; // init empty array (contains 0 for primitive numerical values, false for boolean, null for objects)
 
         System.out.println(pole3); // toString() implementation returns just an address
