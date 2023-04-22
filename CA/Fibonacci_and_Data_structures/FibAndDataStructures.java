@@ -10,11 +10,13 @@ public class FibAndDataStructures {
         System.out.println(fibonacciArrlong(10, null));
         // fibonacci with Map caching – dynamic programming
         System.out.println(fibonacciMap(10, null));
+        // basic recursive fibonacci
+        System.out.println(fibonacci(10));
 
         System.out.println("=== pole");
 
         int a = 12;
-        int[] pole = {1, 3}; // shorthand
+        int[] pole = {1, 3, a}; // shorthand
         int[] pole2 = new int[] {1, 3}; // long version
         int[] pole3 = new int[2]; // init empty array (contains 0 for primitive numerical values, false for boolean, null for objects)
 
@@ -178,5 +180,11 @@ public class FibAndDataStructures {
         System.out.println(map);
 
         return map.get(index);
+    }
+
+    static long fibonacci(int index) {
+        if (index < 2) return index;
+
+        return fibonacci(index - 1) + fibonacci(index - 2);
     }
 }
