@@ -1,7 +1,6 @@
 package gardenspeedrun;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Garden {
     private ArrayList<Plant> plants = new ArrayList<>();
