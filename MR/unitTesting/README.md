@@ -25,7 +25,6 @@ and...:
 
 [Source](https://leanylabs.com/blog/good-unit-tests/)
 
-_Countering_ class was made **after** org.gfa.dusi.testing.countering.CounterTest:
 ## Test Driven Development
 Test Driven Development (TDD) is a software development practice that focuses on creating unit test cases before developing the actual code. It is an iterative approach that combines programming, the creation of unit tests, and refactoring.
 
