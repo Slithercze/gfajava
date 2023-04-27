@@ -11,7 +11,7 @@ The mentors are Aleš, Lukáš J., Lukáš K., Matěj, Jakub and Dávid
 ## Important Links
 
 * [Wiki](https://github.com/green-fox-academy/otocyon-mantis-syllabus/wiki)- collection of your daily learning materials
-* [Lightning talks](https://docs.google.com/spreadsheets/d/1Yvm5eSdfxGAnYwK9AQYubEXEa-49MqJVmkOAH7bqjAI/edit?usp=sharing)
+* [Lightning talks](https://github.com/orgs/green-fox-academy/projects/197/views/1)
 * [Discord](https://discord.gg/MfRJyw7c) - for daily communication
 * [Github - GreenFox](https://github.com/green-fox-academy) - overall tracking of our course
 * [Class Calendar](https://calendar.google.com/calendar/u/0?cid=Y18wMDYzM2U5ZWM5ZTFmZjIyZWVkOTRlY2VkMDQyOTczMGI2ZmJhNDE5NGM4N2RjNTJlNjk1ZWJiNTIwNTg3OGMwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)
