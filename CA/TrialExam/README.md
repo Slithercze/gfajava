@@ -191,7 +191,10 @@ projects
 
 ````
 rm */data.txt
+
 mv program/assets/pic* exam/images/
+
+cd program # !!!
 git add .
 git commit -m "delete txt files and move image files"
 ````
