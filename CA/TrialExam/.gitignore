@@ -1,0 +1,4 @@
+.idea
+*.zip
+out
+.DS_Store
