@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee detail</title>
+</head>
+<body>
+    <a href="/">Back to mainpage</a>
+    <h1>Employee detail</h1>
+    <ul>
+        <li th:text="${employee.name}"></li>
+        <li th:text="${employee.age}"></li>
+        <li th:text="${employee.description}"></li>
+    </ul>
+</body>
+</html>
