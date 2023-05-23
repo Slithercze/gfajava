@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>The best employee app</title>
+</head>
+<body>
+    <form action="/" method="get">
+        <label>Minimal age: <input type="number" name="age"></label>
+        <button type="submit">Add</button>
+    </form>
+
+    <p th:if="${age}" th:text="|Filtered age: ${age}|"></p>
+
+    <ul th:if="${employees.size()} > 0">
+        <li th:each="employee : ${employees}">
+            <span th:text="|${employee.name} - ${employee.age}|"></span>
+            -
+            <a th:href="@{/{id}(id=${employeeStat.index + 1})}">Detail</a>
+        </li>
+    </ul>
+
+    <p th:unless="${employees.size()} > 0" th:text="|There are 0 employees|"></p>
+
+    <form action="/add-employee" method="post">
+        <label>Name: <input type="text" name="name"></label>
+        <label>Age: <input type="number" name="age"></label>
+        <label>Description: <input type="text" name="description"></label>
+        <button type="submit">Add employee</button>
+    </form>
+</body>
+</html>

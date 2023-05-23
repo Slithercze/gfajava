@@ -1,10 +1,10 @@
-package com.gfamr.springmr;
+package com.example.employeeappdb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringMrApplicationTests {
+class EmployeeappdbApplicationTests {
 
   @Test
   void contextLoads() {
