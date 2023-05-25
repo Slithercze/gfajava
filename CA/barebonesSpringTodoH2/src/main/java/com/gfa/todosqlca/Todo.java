@@ -45,4 +45,9 @@ public class Todo {
     public Long getId() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        return (this.isDone ? "[x]" : "[ ]") + this.title ;
+    }
 }
