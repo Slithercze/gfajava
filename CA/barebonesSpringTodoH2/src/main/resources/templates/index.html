@@ -12,11 +12,11 @@
     <script>
         const ulEl = document.querySelector("ul")
         let i = 0;
-        fetch("/api/v1/todos").then(r => r.json()).then(j => {
-            j.forEach(t => {
+        fetch("/api/v1/todos").then(response => response.json()).then(json => {
+            json.forEach(todo => {
                 setTimeout(() => {
                     const li = document.createElement("li")
-                    li.textContent = t.title
+                    li.textContent = todo.title
 
                     ulEl.appendChild(li)
                 }, i++ * 1000)
