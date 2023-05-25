@@ -1,7 +1,7 @@
-package com.gfa.todosqlca;
+package com.gfa.todosqlca.controllers;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
+import com.gfa.todosqlca.Todo;
+import com.gfa.todosqlca.TodoService;
 import jakarta.transaction.Transactional;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,27 +10,27 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/todos")
-public class TodoController {
-    @PersistenceContext
-    private EntityManager entityManager;
+@RequestMapping("/api/v1/todos")
+public class ApiController {
+    private TodoService todoService;
 
-    @GetMapping("/")
+    public ApiController(TodoService todoService) {
+        this.todoService = todoService;
+    }
+
+    @GetMapping
     public ResponseEntity index() {
-        List<Todo> todos = entityManager
-                .createNativeQuery("select * from todo", Todo.class)
-                .getResultList();
-
+        List<Todo> todos = todoService.getAll();
         return ResponseEntity.status(HttpStatus.OK).body(todos);
     }
 
-    @PostMapping("/")
+    @PostMapping
     @Transactional
     public ResponseEntity add(@RequestBody Todo t) {
         if (t.isDone() == null || t.isUrgent() == null || t.getTitle() == null) {
             return ResponseEntity.status(400).body(t);
         }
-        entityManager.persist(t);
+        todoService.save(t);
 
         return ResponseEntity.status(201).body(t);
     }
@@ -38,14 +38,15 @@ public class TodoController {
     @PutMapping("/{id}")
     @Transactional
     public ResponseEntity update(@PathVariable Long id, @RequestBody Todo todo) {
-        Todo oldTodo = entityManager.find(Todo.class, id);
+        Todo oldTodo = todoService.findByID(id);
 
         if (oldTodo == null) {
             return ResponseEntity.status(400).body("Invalid ID");
         }
 
         todo.setId(id); // we better use the one from the path, as defined by REST
-        entityManager.merge(todo);
+
+        todoService.update(todo);
 
         return ResponseEntity.status(202).body(todo);
     }
@@ -53,11 +54,10 @@ public class TodoController {
     @DeleteMapping("/{id}")
     @Transactional
     public ResponseEntity delete(@PathVariable Long id) {
-
-        Todo t = entityManager.find(Todo.class, id);
+        Todo t = todoService.findByID(id);
 
         if (t != null) {
-            entityManager.remove(t);
+            todoService.remove(t);
         }
 
         return ResponseEntity.status(200).body("okacko");
