@@ -6,8 +6,23 @@
 </head>
 <body>
     <ul>
-        <li th:each="todo : ${todos}" th:text="${todo}"></li>
+<!--        <li th:each="todo : ${todos}" th:text="${todo}"></li>-->
     </ul>
+
+    <script>
+        const ulEl = document.querySelector("ul")
+        let i = 0;
+        fetch("/api/v1/todos").then(r => r.json()).then(j => {
+            j.forEach(t => {
+                setTimeout(() => {
+                    const li = document.createElement("li")
+                    li.textContent = t.title
+
+                    ulEl.appendChild(li)
+                }, i++ * 1000)
+            })
+        })
+    </script>
 
     <form method="post" action="/add">
         <label>
