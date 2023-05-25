@@ -25,7 +25,6 @@ public class ApiController {
     }
 
     @PostMapping
-    @Transactional
     public ResponseEntity add(@RequestBody Todo t) {
         if (t.isDone() == null || t.isUrgent() == null || t.getTitle() == null) {
             return ResponseEntity.status(400).body(t);
@@ -36,7 +35,6 @@ public class ApiController {
     }
 
     @PutMapping("/{id}")
-    @Transactional
     public ResponseEntity update(@PathVariable Long id, @RequestBody Todo todo) {
         Todo oldTodo = todoService.findByID(id);
 
@@ -52,7 +50,6 @@ public class ApiController {
     }
 
     @DeleteMapping("/{id}")
-    @Transactional
     public ResponseEntity delete(@PathVariable Long id) {
         Todo t = todoService.findByID(id);
 
