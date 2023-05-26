@@ -5,7 +5,6 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
-import java.util.List;
 
 @Service
 public class TodoServiceEntityImpl implements TodoService {
@@ -13,7 +12,7 @@ public class TodoServiceEntityImpl implements TodoService {
     private EntityManager entityManager;
 
     @Override
-    public List<Todo> getAll() {
+    public Iterable<Todo> getAll() {
         return entityManager
                 .createNativeQuery("select * from todo", Todo.class)
                 .getResultList();

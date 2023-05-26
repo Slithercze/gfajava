@@ -20,8 +20,7 @@ public class ApiController {
 
     @GetMapping
     public ResponseEntity index() {
-        List<Todo> todos = todoService.getAll();
-        return ResponseEntity.status(HttpStatus.OK).body(todos);
+        return ResponseEntity.status(HttpStatus.OK).body(todoService.getAll());
     }
 
     @PostMapping
