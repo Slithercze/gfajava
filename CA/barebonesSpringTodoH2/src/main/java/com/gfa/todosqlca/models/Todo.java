@@ -1,4 +1,4 @@
-package com.gfa.todosqlca;
+package com.gfa.todosqlca.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,7 +1,6 @@
 package com.gfa.todosqlca.services;
 
-import com.gfa.todosqlca.Todo;
-import com.gfa.todosqlca.services.TodoService;
+import com.gfa.todosqlca.models.Todo;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;

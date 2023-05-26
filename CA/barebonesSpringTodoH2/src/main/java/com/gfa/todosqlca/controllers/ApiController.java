@@ -1,6 +1,6 @@
 package com.gfa.todosqlca.controllers;
 
-import com.gfa.todosqlca.Todo;
+import com.gfa.todosqlca.models.Todo;
 import com.gfa.todosqlca.services.TodoService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
