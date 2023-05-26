@@ -1,15 +1,27 @@
-package com.gfa.todosqlca;
+package com.gfa.todosqlca.services;
 
+import com.gfa.todosqlca.Todo;
+import com.gfa.todosqlca.repositories.TodoRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
-public class TodoServiceEntityImpl implements TodoService {
-    @PersistenceContext
-    private EntityManager entityManager;
+public class TodoServiceRepositoryImpl implements TodoService {
+//    @PersistenceContext
+//    private EntityManager entityManager;
+
+
+    private TodoRepository todoRepository;
+
+    public TodoServiceRepositoryImpl(TodoRepository todoRepository) {
+        this.todoRepository = todoRepository;
+    }
 
     @Override
     public List<Todo> getAll() {

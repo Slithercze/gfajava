@@ -1,7 +1,8 @@
 package com.gfa.todosqlca.controllers;
 
-import com.gfa.todosqlca.Todo;
-import com.gfa.todosqlca.TodoService;
+import com.gfa.todosqlca.services.TodoService;
+import com.gfa.todosqlca.services.TodoServiceRepositoryImpl;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +15,7 @@ public class WebController {
 
     private TodoService todoService;
 
-    public WebController(TodoService todoService) {
+    public WebController(@Qualifier("todoServiceRepositoryImpl") TodoService todoService) {
         this.todoService = todoService;
     }
 

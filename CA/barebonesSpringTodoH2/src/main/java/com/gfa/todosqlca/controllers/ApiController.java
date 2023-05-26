@@ -1,8 +1,8 @@
 package com.gfa.todosqlca.controllers;
 
 import com.gfa.todosqlca.Todo;
-import com.gfa.todosqlca.TodoService;
-import jakarta.transaction.Transactional;
+import com.gfa.todosqlca.services.TodoService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,7 @@ import java.util.List;
 public class ApiController {
     private TodoService todoService;
 
-    public ApiController(TodoService todoService) {
+    public ApiController(@Qualifier("todoServiceRepositoryImpl") TodoService todoService) {
         this.todoService = todoService;
     }
 

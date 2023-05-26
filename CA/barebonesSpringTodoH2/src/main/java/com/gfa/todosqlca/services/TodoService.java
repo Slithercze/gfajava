@@ -1,5 +1,6 @@
-package com.gfa.todosqlca;
+package com.gfa.todosqlca.services;
 
+import com.gfa.todosqlca.Todo;
 import jakarta.transaction.Transactional;
 
 import java.util.List;
