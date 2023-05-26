@@ -18,12 +18,18 @@ public class TodoService {
                 .getResultList();
     }
 
+    // for science!
     @Transactional
     public Todo create(String title) {
+        return create(title, false);
+    }
+
+    @Transactional
+    public Todo create(String title, boolean isUrgent) {
         Todo t = new Todo();
         t.setTitle(title);
+        t.setIsUrgent(isUrgent);
         t.setIsDone(false);
-        t.setIsUrgent(false);
 
         entityManager.persist(t);
         return t;

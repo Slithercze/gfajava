@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @Controller
 @RequestMapping("/")
 public class WebController {
@@ -23,8 +25,8 @@ public class WebController {
     }
 
     @PostMapping("add")
-    public String add(@RequestParam String title) {
-        todoService.create(title);
+    public String add(@RequestParam String title, @RequestParam Optional<Boolean> isUrgent) {
+        todoService.create(title, isUrgent.orElse(false));
         return "redirect:/";
     }
 }

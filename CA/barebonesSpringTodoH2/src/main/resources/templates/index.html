@@ -11,22 +11,34 @@
 
     <script>
         const ulEl = document.querySelector("ul")
-        let i = 0;
-        fetch("/api/v1/todos").then(response => response.json()).then(json => {
-            json.forEach(todo => {
-                setTimeout(() => {
-                    const li = document.createElement("li")
-                    li.textContent = todo.title
 
-                    ulEl.appendChild(li)
-                }, i++ * 1000)
-            })
-        })
+        const loadData = () => {
+
+            fetch("/api/v1/todos")
+                .then(response => response.json())
+                .then(json => {
+                    ulEl.innerHTML = ""
+                    json.forEach(todo => {
+                        const li = document.createElement("li")
+                        li.textContent = (todo.urgent ? "!! " : "") + todo.title
+
+                        ulEl.appendChild(li)
+                    })
+                })
+        }
+
+        // setInterval(loadData, 1000)
+        loadData()
     </script>
 
     <form method="post" action="/add">
         <label>
             Title <input name="title">
+        </label>
+
+        <label>
+            <input type="checkbox" name="isUrgent">
+             isUrgent
         </label>
 
         <input type="submit" value="udelej to omg!">
