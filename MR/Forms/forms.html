@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input { display: block;}
+    </style>
+    <script defer src="forms.js"></script>
+</head>
+<body>
+    <!-- backend validation / with JS interaction -->
+    <!-- form validation -->
+    <!-- sending sensitive data -->
+
+    
+
+    <h1>Formular</h1>
+    <form method="post" id="form" action="https://httpbin.org/post">
+        <input type="color" name="color">
+        <!-- <input name="jmeno" value="@" placeholder="jmeno" required pattern="\d{3,5}">
+        <input name="jmeno" required minlength="5" maxlength="10"> -->
+        <input type="text" name="jmeno">
+        
+        <div class="inputWrap">
+            <input type="submit" name="submit" value="lol">
+            <span>ocicko</span>
+        </div>
+
+        <select name="vyber">
+            <option value="1">jit domu</option>
+            <option value="2">zustat v praci</option>
+            <option value="3" style="display: none">jit na pivo</option>
+        </select>
+        
+        <input type="submit" name="submit" value="lol2">
+        <input type="password" id="password" name="heslicko">
+
+        <button name="cau" value="nevim">
+            <img src="https://picsum.photos/200" alt="">
+        </button>
+    </form>
+
+    <script>
+        const form = document.querySelector("#form")
+
+        form.onsubmit = (event) => {}
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault()
+
+            const formData = new FormData(form)
+            const obj = Object.fromEntries(formData)
+
+            const json = JSON.stringify(obj)
+
+            fetch(
+                'https://httpbin.org/post',
+                {
+                    method: 'POST',
+                    body: json,
+                    headers: {"Content-Type": "Application/json"}
+                }
+            )
+            .then(res => res.json())
+            .then(obj => console.log(obj))
+        })
+    </script>
+</body>
+</html>
