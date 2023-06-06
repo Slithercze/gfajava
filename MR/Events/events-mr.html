@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="coolio">
+        <form id="coolio-form">
+            <h1>Events</h1>
+            <p id="iscool">Coolio is cool</p>
+            <p>He is so cool that he can do this:</p>
+            <input type="text" id="coolio-funfact" name="coolio-funfact" placeholder="Type in your Coolio fun fact">
+            <p id="coolio-p"></p>
+            <button id="coolio-button">Coolio!</button>
+        </form>
+    </div>
+    <script>
+        let funFact = document.querySelector("#coolio-funfact");
+        let coolioP = document.getElementById("coolio-p");
+        let coolioButton = document.getElementById("coolio-button");
+        let isCool = document.getElementById("iscool");
+        let form = document.getElementById("coolio-form");
+        let coolio = document.getElementById("coolio")
+        
+        coolio.addEventListener("click", (e) => {
+            console.log("Jsem v divu, brasko")
+        })
+        form.addEventListener("click", (e) => {
+            // e.stopPropagation()
+            console.log(e.target)
+            console.log(e.currentTarget)
+        })
+        funFact.addEventListener("keyup", (e) => {
+            addText(e, 6)
+            // removeEventListener("keyup", (e) => {})
+        })
+        funFact.addEventListener("blur", (e) => {
+            funFact.removeEventListener("keyup", addText)
+        })
+
+        function addText(e, number) {
+            coolioP.innerText +=  e.key
+        }
+        // funFact.addEventListener("focus", (e) => {
+        //     console.log(e)
+        //     funFact.dispatchEvent(new Event("blur"))
+        // })
+        // funFact.addEventListener("blur", (e) => {
+        //     coolioP.innerText += "Zaplať"
+        // })
+        // funFact.addEventListener("keydown", (e) => {
+        //     coolioP.innerText +=  e.key
+        // })
+    </script>
+</body>
+</html>
