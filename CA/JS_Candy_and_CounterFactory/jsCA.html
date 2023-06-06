@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="app">
+        <button>Make me a counter</button>
+    </section>
+
+    <script>
+        // Write a function that will hook up the "Make me a counter" button with the creation of a new counter.
+        // This function should also create a new button and append it to #app.
+        // The content of the new button will reflect the state of its associated counter.
+        // Clicking the button should call the 'inc' function and update the button's content.
+
+        function counterFactory() {
+            let count = 0;
+
+            function peek() {
+                return count
+            }
+
+            function inc() {
+                return ++count;
+            }
+
+            return {
+                peek,
+                inc
+            }
+        }
+    </script>
+</body>
+</html>
