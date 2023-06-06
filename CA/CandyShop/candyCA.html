@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            font-family: arial;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Candy shop</title>
+</head>
+
+<body>
+    <h1>🍬Candy shop🍬</h1>
+    <dl class="stats">
+        <dt>Candies</dt>
+        <dd class="candies">0</dd>
+        <dt>Lollipops</dt>
+        <dd class="lollipops">🍭🍭🍭</dd>
+        <dt>Candies / Second</dt>
+        <dd class="speed">0</dd>
+    </dl>
+    <button class="create-candies">Create candies</button>
+    <button class="buy-lollipops">Buy Lollipops</button>
+    <button class="candy-machine">Make candy rain</button>
+
+
+    <script>
+        candyShop({
+            candiesView: document.querySelector('.candies'),
+            createCandyBtn: document.querySelector('.create-candies'),
+            buyLollipopBtn: document.querySelector('.buy-lollipops'),
+            lollipopView: document.querySelector('.lollipops'),
+            speedView: document.querySelector('.speed'),
+            machineBtn: document.querySelector('.candy-machine'),
+        })
+
+        function candyShop({ candiesView, createCandyBtn, buyLollipopBtn, lollipopView, speedView, machineBtn }) {
+            const LOLLIPOP = '🍭'
+            const GAME_CAP = 10000
+            const CAP_MESSAGE = 'get a life, bro'
+            const DEFAULT_CANDIES = 1000
+            const DEFAULT_LOLLIPOPS = 3
+
+            const state = {
+                candies: DEFAULT_CANDIES,
+                lollipops: DEFAULT_LOLLIPOPS,
+                speed: 0,
+                gameInterval: 1000,
+                youreDoneBro: false
+            }
+
+            let interval
+
+            function initGame() {
+                createCandyBtn.onclick = createCandy
+                buyLollipopBtn.onclick = buyLollipop
+                machineBtn.onclick = makeItRain
+
+                interval = setInterval(gameLoop, state.gameInterval)
+                setInterval(measureSpeed, 1000)
+
+                render()
+            }
+
+            function makeItRain() {
+                clearInterval(interval)
+                state.gameInterval /= 10
+                interval = setInterval(gameLoop, state.gameInterval)
+            }
+            
+
+            function gameLoop() {
+                const addition = Math.floor(state.lollipops / 10)
+                state.candies += addition
+                render()
+
+                if (!state.youreDoneBro && state.candies > GAME_CAP) {
+                    state.youreDoneBro = true
+                    alert(CAP_MESSAGE)
+                }
+            }
+
+            let candiesLastTime = 0
+            function measureSpeed() {
+                const tmp = candiesLastTime
+                candiesLastTime = state.candies
+
+                state.speed = state.candies - tmp
+            }
+
+            function buyLollipop() {
+                if (state.candies >= 100) {
+                    state.candies -= 100
+                    state.lollipops++
+                    render()
+                }
+            }
+
+            function render() {
+                candiesView.innerText = state.candies
+                lollipopView.innerText = LOLLIPOP.repeat(state.lollipops)
+                speedView.innerText = state.speed
+            }
+
+            function createCandy() {
+                state.candies++
+                render()
+            }
+
+            initGame()
+        }
+
+
+
+
+        // - Gather 10.000 candies!
+        // - Clicking the ‘Create candies’ button gives you 1 candy.
+        // - You can buy a lollipop for 100 candies by clicking the ‘Buy lollipop’ button.
+        // - 10 lollipops generate 1 candy per second.
+        //   - Use the 🍭 emoji to display the lollipops you have
+        // - Display the candy producton rate in the `Candies / Second` row
+        // - If you press the "make candy rain" button, the candy generation should speed up 10x
+    </script>
+</body>
+
+</html>
