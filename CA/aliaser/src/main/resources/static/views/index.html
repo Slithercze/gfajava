@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .error {
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <p></p>
+    <p class="error"></p>
+
+    <form>
+        <label>
+            URL
+            <input type="url" name="url">
+        </label>
+        <label>
+            Alias
+            <input type="text" name="alias">
+        </label>
+        <input type="submit">
+    </form>
+
+    <script>
+        const form = document.querySelector("form")
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault()
+
+            const formData = new FormData(form)
+            const data = Object.fromEntries(formData)
+            const messageOutput = document.querySelector("p")
+            const errorOutput = document.querySelector(".error")
+
+            fetch("/api/links", {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => {
+                    messageOutput.innerText = ''
+                    errorOutput.innerText = ''
+
+                    if (response.ok) {
+                        return response.json()
+                    } else if (response.status == 400) {
+                        throw new Error("Your alias is already in use!")
+                    }
+                })
+                .then(alias => {
+                    messageOutput.innerText = `Your URL is aliased to ${alias.alias} and your secret code is ${alias.secretCode}.`
+                    form.reset()
+                })
+                .catch(error => {
+                    debugger
+
+                    errorOutput.innerText = error.message
+                })
+        })
+    </script>
+</body>
+</html>
