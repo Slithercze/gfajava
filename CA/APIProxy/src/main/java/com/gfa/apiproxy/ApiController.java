@@ -16,6 +16,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Optional;
 
+@CrossOrigin
 @RestController
 
 public class ApiController {
@@ -23,7 +24,7 @@ public class ApiController {
 
     private String path = "./responses/";
 
-    @CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST})
+//    @CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST})
     @RequestMapping("/")
     public ResponseEntity index(HttpServletRequest request) throws NoSuchAlgorithmException, IOException {
 
