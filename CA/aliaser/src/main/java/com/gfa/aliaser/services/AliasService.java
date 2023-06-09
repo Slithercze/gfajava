@@ -2,12 +2,7 @@ package com.gfa.aliaser.services;
 
 import com.gfa.aliaser.models.Alias;
 import com.gfa.aliaser.repositories.AliasRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
-
-import java.util.Iterator;
-import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 

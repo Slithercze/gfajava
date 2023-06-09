@@ -27,7 +27,6 @@ public class WebController {
 
     @GetMapping("a/{alias}")
     public String redirect(@PathVariable String alias) {
-
         Optional<Alias> maybeAlias = aliasService.findByAlias(alias);
 
         if (maybeAlias.isPresent()) {
