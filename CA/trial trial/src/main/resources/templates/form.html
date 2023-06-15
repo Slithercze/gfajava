@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Note</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>Create a Note</h1>
+    <form>
+        <label>
+            Title:
+            <input type="text" name="title">
+        </label>
+        <label>
+            Content:
+            <textarea name="content"></textarea>
+        </label>
+        <label>
+            Type:
+            <select name="type">
+                <option value="shopping list">Shopping list</option>
+                <option value="reminder">Reminder</option>
+                <option value="motivational">Motivational</option>
+            </select>
+        </label>
+        <input type="submit" value="save">
+    </form>
+    <p></p>
+    <script src="/add.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+body {
+    margin: 0 auto;
+    padding: 2em;
+    max-width: 90%;
+}
+
+header {
+    display: flex;
+    margin-bottom: 0.5em;
+    justify-content: center;
+}
+
+header > button {
+    padding: 1em;
+    border-radius: 0.5em;
+    border-color: black;
+    margin: 1em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.note-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    position: relative;
+    border-radius: 0.5em;
+    border: 1px solid black;
+}
+
+.note-card > h2 {
+    margin: 0 0 1em;
+    font-size: 1.25em;
+}
+
+.note-card > p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.note-card > button {
+    align-self: flex-end;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    border-color: black;
+}
+
+button:active {
+    background-color: #ccc;
+}
+
+label, input, textarea, button, select {
+    display: block;
+}
