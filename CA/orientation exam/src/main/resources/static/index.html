@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Takeout</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to Green Fox Takeout</h1>
+    <h2>Please enter your info and choose your meal</h2>
+    <form>
+        <label>
+            Name:
+            <input type="text" name="name">
+        </label>
+        <label>
+            Address:
+            <input type="text" name="address">
+        </label>
+        <span>Bases</span>
+        <label>
+            <input type="radio" name="base" value="rice noodles"> Rice noodles
+        </label>
+        <label>
+            <input type="radio" name="base" value="egg noodles"> Egg noodles
+        </label>
+        <label>
+            <input type="radio" name="base" value="white rice"> White rice
+        </label>
+
+        <label>
+            Toppings
+            <select name="topping">
+                <option value="chicken">Chicken</option>
+                <option value="beef">Beef</option>
+                <option value="smoked tofu">Smoked tofu</option>
+            </select>
+        </label>
+        <input type="submit" value="Order">
+    </form>
+    <p></p>
+    <script src="/send.js"></script>
+</body>
+</html>

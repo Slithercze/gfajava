@@ -1,0 +1,3 @@
+label, input[type="text"], select {
+    display: block;
+}
